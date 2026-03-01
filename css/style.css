@@ -1,1 +1,153 @@
+@font-face { font-family: Rubik; src: url('/css/fonts/rubik-regular.ttf'); } 
+@font-face { font-family: Rubik; font-weight: bold; src: url('/css/fonts/rubik-medium.ttf');}
 
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: 'Rubik', sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}   
+
+body {
+  background-color: #18181b;
+  color: #f1f1f1;
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 16px;
+  font-family: 'Rubik', sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+}
+
+::selection {
+    background-color: #fdbe4d;
+    color: #18181b;
+}
+
+a {
+  color: inherit;
+  transition: 0.2s;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #ffffff;
+}
+
+.main {
+  display: flex;
+  flex: 1 0 auto;
+  align-items: center;
+  width: 100%;
+}
+
+.wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  width: 100%;
+}
+
+.author {
+  display: flex;
+  animation: 2.5s cubic-bezier(0.25, 1, 0.3, 1) wipe-in both;
+  align-items: center;
+  margin: 24px 0;
+}
+
+.author h1, .author p {
+  margin: 4px;
+}
+
+.author p {
+  color: #b6b6b6;
+  margin-left: 0.65vh;
+}
+
+.link-bar {
+  margin-left: auto;
+  margin-top: 10px;
+  animation: 2.5s cubic-bezier(0.25, 1, 0.3, 1) wipe-in both;
+}
+
+.link-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.socials {
+  margin: 4px;
+  display: flex;
+  align-items: center;
+  color: #868686;
+}
+
+.social-logo {
+  display: flex;
+  margin: 4px;
+}
+
+.footer {
+  font-size: 10px;
+  animation: 2.5s cubic-bezier(0.25, 1, 0.3, 1) wipe-in both;
+  color: #868686;
+  opacity: .3;
+}
+
+.footer a {
+  text-decoration: underline;
+}
+
+.sites .button {
+  background-color: #1C2833; /* Green */
+  border: 1px solid #21618C;
+  color: #F2F3F4;
+  padding: 5px 7px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 14px;
+  cursor: pointer;
+  float: left;
+  animation: 2.5s cubic-bezier(0.25, 1, 0.3, 1) wipe-in both;
+}
+
+.sites .button:not(:last-child) {
+  border-right: none; /* Prevent double borders */
+}
+
+.sites .button:hover {
+  background-color: #21618C;
+}
+
+@keyframes wipe-in {
+  0% {
+    clip-path: inset(0 100% 0 0);
+  }
+  100% {
+    clip-path: inset(0 0 0 0);
+  }
+}
+
+@media (max-width: 578px) {
+  .wrapper {
+    justify-content: center;
+    margin-bottom: 10vh;
+  }
+  
+  .link-bar{
+    margin: 0;
+    margin-top: 10px;
+  }
+
+  .link-row{
+    justify-content: space-between;
+  }
+}
